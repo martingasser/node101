@@ -11,7 +11,7 @@ Type ".help" for more information.
 
 Now you can write JavaScript line by line, and it is interpreted immediately.
 
-The REPL can be exited by pressing Ctrl+D.
+The REPL can be exited by pressing Ctrl-D.
 
 However, we will use node mainly to run JavaScript files.
 
@@ -172,21 +172,11 @@ app.listen(port, () => {
 
 Save the file and go back to the commandline window. You can test the web server by running the script `index.js` in node.
 
-```javascript
-const express = require('express')
-const app = express()
-const port = 3000
-
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
-app.listen(port, () => {
-  console.log(`Web server listening at http://localhost:${port}`)
-})
+```
+node index.js
 ```
 
-Opening `http://localhost:3000/` in a browser should display the message 'Hello World!'.
+Opening `http://localhost:3000/` in a browser should display the message 'Hello World!' (exit the server with Ctrl-C).
 
 Now try to think about what's necessary to return the todo list instead of the string 'Hello World!'.
 
